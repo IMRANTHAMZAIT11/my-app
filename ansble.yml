@@ -1,0 +1,6 @@
+- hosts: all
+  become: yes
+  remote_user: ansadmin
+  tasks:
+  - name: container
+    shell: docker run -itd -p 8090:8080 --name java-web-app imranthamza/java-web-app
